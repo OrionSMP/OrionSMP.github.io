@@ -25,6 +25,24 @@
     <h1 style="text-align: center; font-family: Radwave; color:#ffffff">Orion SMP is a <span style="color:#9645ff">free to play</span>, <span style="color:#9645ff">free to win</span> Minecraft server.</h1>
     <p style="text-align: center; font-family: Radwave; color:#ffffff">Anyone who wants to can play on Orion SMP.</p>
 </div>
+    
+    <div class="server-status">
+    My awesome server is currently <span class="server-online"></span>!
+</div>
+
+<script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+<script>
+    MinecraftAPI.getServerStatus('s.nerd.nu', {
+        port: 25565 // optional, only if you need a custom port
+    }, function (err, status) {
+        if (err) {
+            return document.querySelector('.server-status').innerHTML = 'Error loading status';
+        }
+
+        // you can change these to your own message!
+        document.querySelector('.server-online').innerHTML = status.online ? 'up' : 'down';
+    });
+</script>
 
 <section class="events">
     <center>
