@@ -27,13 +27,13 @@
 </div>
     
     <div class="server-status" style="text-align: center; font-family: Radwave; color:#ffffff">
-    My awesome server is currently <span class="server-online"></span>!
+    Orion SMP is currently <span class="server-online"></span>.
 </div>
 
 <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
 <script>
-    MinecraftAPI.getServerStatus('s.nerd.nu', {
-        port: 25565 // optional, only if you need a custom port
+    MinecraftAPI.getServerStatus('147.135.30.87:25567', {
+        port: 25567 // optional, only if you need a custom port
     }, function (err, status) {
         if (err) {
             return document.querySelector('.server-status').innerHTML = 'Error loading status';
